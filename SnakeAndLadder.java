@@ -8,7 +8,7 @@ public class SnakeAndLadder {
 
         double playerOnePosition=0.0;
 
-        while(playerOnePosition<=100.0){
+        while(playerOnePosition<100.0){
             double dice=(Math.floor(Math.random()*10)%6)+1.0;
             double option=(Math.floor(Math.random()*10)%3);
 
@@ -18,11 +18,18 @@ public class SnakeAndLadder {
                     break;
                 case "1.0":
                     System.out.println("Ladder");
-                    playerOnePosition=playerOnePosition+dice;
+                    if(playerOnePosition+dice<=100){
+                        playerOnePosition=playerOnePosition+dice;
+                    }
                     break;
                 default:
                     System.out.println("Snake");
-                    playerOnePosition=playerOnePosition-dice;
+                    if (playerOnePosition-dice<0.0) {
+                        playerOnePosition=0.0;
+                    }
+                    else{
+                        playerOnePosition=playerOnePosition-dice;
+                    }
                     break;
             }
         }
