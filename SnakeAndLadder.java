@@ -8,5 +8,6 @@ public class SnakeAndLadder {
 
         int playerOnePosition=0;
         double dice=(Math.floor(Math.random()*10)%6)+1.0;
+        System.out.println(dice);
     }
 }
