@@ -22,7 +22,12 @@ public class SnakeAndLadder {
                     break;
                 default:
                     System.out.println("Snake");
-                    playerOnePosition=playerOnePosition-dice;
+                    if (playerOnePosition-dice<0.0) {
+                        playerOnePosition==0.0
+                    }
+                    else{
+                        playerOnePosition=playerOnePosition-dice;
+                    }
                     break;
             }
         }
