@@ -23,7 +23,7 @@ public class SnakeAndLadder {
                 default:
                     System.out.println("Snake");
                     if (playerOnePosition-dice<0.0) {
-                        playerOnePosition==0.0;
+                        playerOnePosition=0.0;
                     }
                     else{
                         playerOnePosition=playerOnePosition-dice;
